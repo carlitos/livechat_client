@@ -8,6 +8,7 @@ module LiveChat
       end
 
       def get_hello_api
+        super
         puts "Hello API Livechat"
       end
 
