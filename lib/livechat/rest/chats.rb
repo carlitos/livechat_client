@@ -4,7 +4,7 @@ module LiveChat
       def initialize(path, client)
         super
         #chats is different than the other resources
-        @list_key = 'chatss'
+        @list_key = 'chats'
       end
 
       def get_chat_pages(pages)
