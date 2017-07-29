@@ -7,6 +7,11 @@ module LiveChat
         @list_key = 'chats'
       end
 
+      def get_chat_pages(pages)
+        @client.get "#{@path}/page/#{pages}"
+        self
+      end
+
       def get_hello_api
         super
         puts 'Hello API Livechat'
