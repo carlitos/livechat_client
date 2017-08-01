@@ -10,7 +10,7 @@ module LiveChat
       end
 
       def get_chat_pages(page)
-        @client.get "#{@path}?page=#{page}"
+        @client.get "#{@path}?page=[#{page}]"
       end
 
       def get_hello_api
