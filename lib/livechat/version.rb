@@ -1,3 +1,3 @@
 module LiveChat
-  VERSION = "0.0.15".freeze
+  VERSION = "0.0.17".freeze
 end

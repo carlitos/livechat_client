@@ -10,12 +10,12 @@ module LiveChat
       end
 
       def get_chat_pages(pages)
-        @client.get "#{@path}?page=#{pages}"
+        @client.get "#{@path}?pages=#{pages}"
         self
       end
 
       def get_hello_api
-        puts 'Hello API Livechat'
+        saludo = 'Hello API Livechat'
       end
 
     end
