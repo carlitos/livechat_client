@@ -5,10 +5,12 @@ module LiveChat
         super
         #chats is different than the other resources
         @list_key = 'chats'
+
+
       end
 
-      def get_chat_pages(pages)
-        @client.get "#{@path}?page=[#{pages}]"
+      def get_chat_pages(*args)
+        @client.get "#{@path}?page=", Hash[*args]
         self
       end
 
