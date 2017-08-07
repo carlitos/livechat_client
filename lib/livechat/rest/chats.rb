@@ -21,7 +21,6 @@ module LiveChat
       # https://api.livechatinc.com/chats?query=""
       def get_chats_by_query(query)
         @client.get "#{@path}/?query=#{query}"
-        nombre_del_query "#{query}"
       end
 
 
