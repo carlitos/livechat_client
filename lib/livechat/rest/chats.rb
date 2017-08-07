@@ -18,6 +18,13 @@ module LiveChat
         saludo = 'Hello API Livechat'
       end
 
+
+      def get_chats_by_query(query)
+        @client.get "#{@path}/query"
+        nombre_del_query "#{query}"
+      end
+
+
     end
 
     class Chat < InstanceResource
@@ -27,13 +34,6 @@ module LiveChat
         @client.post "#{@path}/send_transcript", Hash[*args]
         self
       end
-
-
-      def get_chats_by_query(query)
-        @client.get "#{@path}/query"
-        nombre_del_query "#{query}"
-      end
-
 
     end
   end
