@@ -20,7 +20,7 @@ module LiveChat
 
       # https://api.livechatinc.com/chats?query=""
       def get_chats_by_query(query)
-        @client.get "#{@path}/?query=#{query}"
+        @client.get "#{@path}?query=#{query}"
       end
 
 
