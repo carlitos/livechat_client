@@ -13,6 +13,7 @@ module LiveChat
         @client.get "#{@path}?page=#{page}"
       end
 
+      # Para probar si podia llegar al metodo
       def get_hello_api
         saludo = 'Hello API Livechat'
       end
@@ -21,10 +22,19 @@ module LiveChat
 
     class Chat < InstanceResource
 
+      # Solo manda el link por email
       def send_transcript(*args)
         @client.post "#{@path}/send_transcript", Hash[*args]
         self
       end
+
+
+      def get_chats_by_query(query)
+        @client.get "#{@path}/query"
+        nombre_del_query "#{query}"
+      end
+
+
     end
   end
 end
